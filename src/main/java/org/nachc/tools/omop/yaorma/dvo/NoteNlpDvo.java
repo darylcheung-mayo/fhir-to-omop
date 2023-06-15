@@ -23,7 +23,7 @@ public class NoteNlpDvo implements Dvo {
     // schemaName
     //
     
-    public static final String SCHEMA_NAME = "cdm_f2o_build";
+    public static final String SCHEMA_NAME = "dbo";
     
     //
     // columnNames
@@ -283,7 +283,7 @@ public class NoteNlpDvo implements Dvo {
     };
     
     public String getSchemaName() {
-        return SCHEMA_NAME;
+        return "dbo";
     };
     
     public String[] getColumnNames() {

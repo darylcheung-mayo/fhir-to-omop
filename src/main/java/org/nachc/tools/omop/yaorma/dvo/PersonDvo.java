@@ -23,7 +23,7 @@ public class PersonDvo implements Dvo {
     // schemaName
     //
     
-    public static final String SCHEMA_NAME = "cdm_f2o_build";
+    public static final String SCHEMA_NAME = "dbo";
     
     //
     // columnNames
@@ -343,7 +343,9 @@ public class PersonDvo implements Dvo {
     };
     
     public String getSchemaName() {
-        return SCHEMA_NAME;
+        System.out.println("line346");
+        return "dbo";
+        //return "dbo";
     };
     
     public String[] getColumnNames() {

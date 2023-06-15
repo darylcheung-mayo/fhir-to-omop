@@ -23,7 +23,7 @@ public class FhirResourceDvo implements Dvo {
     // schemaName
     //
     
-    public static final String SCHEMA_NAME = "cdm_f2o_build";
+    public static final String SCHEMA_NAME = "dbo";
     
     //
     // columnNames
@@ -118,7 +118,8 @@ public class FhirResourceDvo implements Dvo {
     };
     
     public String getSchemaName() {
-        return SCHEMA_NAME;
+        return "dbo";
+        //return "dbo";
     };
     
     public String[] getColumnNames() {
