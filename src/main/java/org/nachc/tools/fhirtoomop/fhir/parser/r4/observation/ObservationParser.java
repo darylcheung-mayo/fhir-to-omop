@@ -140,7 +140,7 @@ public class ObservationParser {
 //			} else {
 //				return ref.split("/")[1];
 //			}
-			String rtn = this.obs.getEncounter().getId();
+			String rtn = this.obs.getEncounter().getResource().getIdElement().getValue();
 			return rtn;
 		} catch (Exception exp) {
 			return null;
@@ -277,11 +277,11 @@ public class ObservationParser {
 		}
 	}
 
-	public String getValueAsNumber() {
+	public BigDecimal getValueAsNumber() {
 		try {
 			Quantity q = getValueQuantity();
 			BigDecimal bd = q.getValue();
-			return bd.toString();
+			return bd;
 		} catch (Exception exp) {
 			return null;
 		}

@@ -11,6 +11,7 @@ import org.hl7.fhir.r4.model.Resource;
 import org.nachc.tools.fhirtoomop.fhir.parser.bundle.IBundleParser;
 
 import com.nach.core.util.fhir.parser.FhirJsonParser;
+import com.nach.core.util.fhir.parser.FhirJsonParserForR4;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,7 +33,8 @@ public class BundleParser implements IBundleParser {
 	public BundleParser(String bundleJson) {
 		try {
 			this.jsonString = bundleJson;
-			this.bundle = FhirJsonParser.parse(bundleJson, Bundle.class);
+			this.bundle = FhirJsonParserForR4.parse(bundleJson, Bundle.class);
+			// this.bundle = FhirJsonParser.parse(bundleJson, Bundle.class);
 		} catch (Exception exp) {
 			log.error("ERROR PARSING BUNDLE: \n\n" + bundleJson);
 			throw new RuntimeException(exp);
